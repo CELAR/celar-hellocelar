@@ -5,8 +5,8 @@
   <groupId>eu.celar.hellocelar</groupId>
   <artifactId>celar-hellocelar-java-deb</artifactId>
   <version>0.1-SNAPSHOT</version>
-  <name>CELAR Hello CELAR deb packaging</name>
-  <description>CELAR Hello CELAR deb packaging</description>
+  <name>CELAR Hello CELAR Java deb packaging</name>
+  <description>CELAR Hello CELAR Java deb packaging</description>
 
   <parent>
     <groupId>eu.celar.hellocelar</groupId>

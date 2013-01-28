@@ -9,16 +9,16 @@
 
   <packaging>pom</packaging>
 
+  <parent>
+    <groupId>eu.celar.hellocelar</groupId>
+    <artifactId>celar-hellocelar-pom</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
   <modules>
     <module>jar</module>
     <module>deb</module>
   </modules>
-
-  <parent>
-    <groupId>eu.celar.hellocelar</groupId>
-    <artifactId>celar-hellocelar</artifactId>
-    <version>0.1-SNAPSHOT</version>
-  </parent>
 
   <dependencies>
 

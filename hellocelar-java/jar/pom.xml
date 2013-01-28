@@ -4,8 +4,8 @@
 
 	<artifactId>celar-hellocelar-java-jar</artifactId>
 	<version>0.1-SNAPSHOT</version>
-	<name>CELAR Hello CELAR jar</name>
-	<description>CELAR Hello CELAR jar build</description>
+	<name>CELAR Hello CELAR Java jar build</name>
+	<description>CELAR Hello CELAR Java jar build</description>
 
   <packaging>jar</packaging>
 
