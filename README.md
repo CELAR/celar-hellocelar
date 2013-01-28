@@ -1,4 +1,4 @@
-celar-helloworld-multimodule
+celar-hellocelar
 ============================
 
 CELAR example Maven multimodule project.
