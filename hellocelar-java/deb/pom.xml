@@ -8,6 +8,8 @@
   <name>CELAR Hello CELAR Java deb packaging</name>
   <description>CELAR Hello CELAR Java deb packaging</description>
 
+  <packaging>pom</packaging>
+
   <parent>
     <groupId>eu.celar.hellocelar</groupId>
     <artifactId>celar-hellocelar-java-pom</artifactId>
@@ -30,6 +32,32 @@
 
   <build>
     <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <id>copy-jar</id>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <stripVersion>true</stripVersion>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>eu.celar.hellocelar</groupId>
+                  <artifactId>celar-hellocelar-java-jar</artifactId>
+                  <type>jar</type>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.vafer</groupId>
         <artifactId>jdeb</artifactId>
@@ -46,11 +74,11 @@
               <dataSet>
 
                 <data>
-                  <src>${project.build.directory}/${project.build.finalName}.jar</src>
+                  <src>${project.build.directory}/celar-hellocelar-java-jar.jar</src>
                   <type>file</type>
                   <mapper>
                     <type>perm</type>
-                    <prefix>/usr/share/jdeb/lib</prefix>
+                    <prefix>/usr/share/celar/lib</prefix>
                     <user>loader</user>
                     <group>loader</group>
                   </mapper>
@@ -59,8 +87,8 @@
                 <data>
                   <type>link</type>
                   <symlink>true</symlink>
-                  <linkName>/usr/share/java/jdeb.jar</linkName>
-                  <linkTarget>/usr/share/jdeb/lib/${project.build.finalName}.jar</linkTarget>
+                  <linkName>/usr/share/java/hellocelar.jar</linkName>
+                  <linkTarget>/usr/share/celar/lib/celar-hellocelar-java-jar.jar</linkTarget>
                 </data>
 
                 <data>

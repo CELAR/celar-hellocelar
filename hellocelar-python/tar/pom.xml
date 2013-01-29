@@ -7,6 +7,8 @@
   <name>CELAR Hello CELAR Python TAR packaging</name>
   <description>CELAR Hello CELAR Python TAR packaging</description>
 
+  <packaging>pom</packaging>
+
   <parent>
     <groupId>eu.celar.hellocelar</groupId>
     <artifactId>celar-hellocelar-python-pom</artifactId>
