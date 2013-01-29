@@ -7,6 +7,7 @@ public class HelloCelar {
     }
     
     public static String getGreetings() {
+    	// comment
     	return "Hello CELAR!";
     }
 }
